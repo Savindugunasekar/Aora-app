@@ -14,8 +14,8 @@ const Home = () => {
 
   const {user} = useGlobalContext()
 
-  const {data:posts,refetch} =useAppwrite(getAllPosts)
-  const {data:latestPosts} =useAppwrite(getLatestPosts)
+  const {data:posts,refetch:refetchPosts} =useAppwrite(getAllPosts)
+  const {data:latestPosts,refetch:refetchTrending} =useAppwrite(getLatestPosts)
 
 
 
@@ -25,7 +25,7 @@ const Home = () => {
     setRefreshing(true)
     //recall any new videos
 
-    await refetch();
+    await Promise.all([refetchPosts(), refetchTrending()]);
 
 
     setRefreshing(false)
@@ -37,7 +37,7 @@ const Home = () => {
         data={posts}
         keyExtractor={(item) => item.$id}
         renderItem={({ item }) => 
-          <VideoCard video={item}/>
+          <VideoCard videoItem={item}/>
         }
         ListHeaderComponent={() => (
           <View className="my-6 px-4 space-y-6">

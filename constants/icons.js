@@ -3,6 +3,9 @@ import home from "../assets/icons/home.png";
 import plus from "../assets/icons/plus.png";
 import profile from "../assets/icons/profile.png";
 import leftArrow from "../assets/icons/left-arrow.png";
+import deleteicon from "../assets/icons/delete.png";
+
+
 import menu from "../assets/icons/menu.png";
 import search from "../assets/icons/search.png";
 import upload from "../assets/icons/upload.png";
@@ -26,4 +29,6 @@ export default {
   logout,
   eyeHide,
   eye,
+  deleteicon
+  
 };
