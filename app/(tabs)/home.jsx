@@ -32,7 +32,7 @@ const Home = () => {
   }
 
   return (
-    <SafeAreaView className="bg-primary">
+    <SafeAreaView className="bg-[#220742]">
       <FlatList
         data={posts}
         keyExtractor={(item) => item.$id}
@@ -53,8 +53,8 @@ const Home = () => {
 
               <View className="mt-1.5">
                 <Image 
-                source={images.logoSmall}
-                className="w-9 h-10"
+                source={images.logo}
+                className="w-10 h-10"
                 resizeMode="contain"/>
               </View>
             </View>

@@ -53,17 +53,27 @@ const SignIn = () => {
   
 
   return (
-    <SafeAreaView className="bg-primary h-full">
+    <SafeAreaView className="bg-[#2d0a57] h-full">
       <ScrollView>
         <View className="w-full justify-center h-full px-4 my-6">
-          <Image
+        <View className="flex  flex-row items-center gap-2  ">
+            <View>
+            <Image
             source={images.logo}
+            className="w-[40px] h-[40px] "
             resizeMode="contain"
-            className="w-[115px] h-[35px]"
           />
+            </View>
+            <View>
+            <Text className="font-bold text-2xl text-white">SnapShare</Text>
+            </View>
+          
+          
+
+          </View>
 
           <Text className="text-2xl text-white font-psemibold mt-10 ">
-            Log into Aora
+            Log into SnapShare
           </Text>
 
           <FormField
@@ -95,7 +105,7 @@ const SignIn = () => {
 
               Don't have an account?{'  '}
 
-              <Link href={'/sign-up'} className="text-lg font-psemibold text-secondary">
+              <Link href={'/sign-up'} className="text-lg font-psemibold text-secondary-200">
 
               Sign Up
               
